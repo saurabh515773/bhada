@@ -1,0 +1,28 @@
+package com.bhada.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "universaladdress")
+public class UniversalAddress {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer addressId;
+	@NotNull
+	private String city;
+	@NotNull
+	private String state;
+	@NotNull
+	private String country;
+	@NotNull
+	private String pincode;
+}
