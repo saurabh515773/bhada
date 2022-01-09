@@ -1,6 +1,6 @@
 package com.bhada.entity;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -52,9 +52,10 @@ public class Owner{
 	@JoinColumn(name = "owner_address_fk" , referencedColumnName = "addressId")
 	private UniversalAddress universalAddress;
 	
-	@OneToMany(targetEntity = Property.class, cascade = CascadeType.ALL)
-	@JoinColumn(name = "owner_property_fk" , referencedColumnName = "ownerId")
-	private List<Property> properties;
+	@OneToMany(mappedBy="owner")	
+//	@OneToMany(targetEntity = Property.class, cascade = CascadeType.ALL)	
+//	@JoinColumn(name = "owner_property_fk" , referencedColumnName = "propertyId")
+	private Set<Property> properties;
 	
 	@NotNull
 	private boolean userEnabled = true;

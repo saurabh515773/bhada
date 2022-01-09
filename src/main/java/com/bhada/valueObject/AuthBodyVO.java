@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class AuthBodyVO {
 
-    private String id;
+    private Integer id;
 
     private String password;
     
-    private String keyIndex;
+    private Integer keyIndex;
 }

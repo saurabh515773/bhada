@@ -1,6 +1,4 @@
 package com.bhada.entity;
-import java.util.Map;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

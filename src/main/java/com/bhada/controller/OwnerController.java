@@ -21,7 +21,7 @@ import com.bhada.valueObject.ResponseObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
-@RequestMapping("/owner")
+@RequestMapping("/api/owner")
 public class OwnerController {
 
 	@Autowired
@@ -33,7 +33,7 @@ public class OwnerController {
 	@Autowired
 	private ObjectMapper objectMapper;
 
-	@PostMapping(path = "/addOwner", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@PostMapping(path = "/addowner", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<ResponseObject> listAll(@RequestBody RequestObject requestObj){
 		try {
 			Owner owner = objectMapper.convertValue(requestObj.getObject(), Owner.class);

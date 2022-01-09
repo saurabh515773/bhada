@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.bhada.entity.TempStorage;
 
 @Repository
-public interface TempStorageRepository extends CrudRepository<TempStorage, String>{
+public interface TempStorageRepository extends CrudRepository<TempStorage, Integer>{
 
 }

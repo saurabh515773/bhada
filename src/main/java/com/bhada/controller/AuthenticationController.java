@@ -136,7 +136,7 @@ public class AuthenticationController {
 
 	private Map<String, Object> createUserAuthenticatedResp(Owner owner, AuthBodyVO data) {
 
-		final UserDetails userDetails = myUserDetailsService.loadUserByUsername(data.getId());
+		final UserDetails userDetails = myUserDetailsService.loadUserByUsername(String.valueOf(data.getId()));
 
 		final String token = jwtUtils.generateToken(userDetails);
 
